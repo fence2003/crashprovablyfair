@@ -77,8 +77,8 @@ hr {
     // 3. X = r / 2^52
     let X = r / 2 ** nBits; // uniformly distributed in [0, 1)
     X = parseFloat(X.toPrecision(9));
-    // 4. X = 99 / (1-X)
-    X = 99 / (1 - X);
+    // 4. X = 97 / (1-X)
+    X = 97 / (1 - X);
     // 5. return max(trunc(X), 100)
     const result = Math.floor(X);
     // return Math.max(1, result / 100);
