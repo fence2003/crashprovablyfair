@@ -61,7 +61,7 @@ hr {
     </tbody>
   </table>
   <script>
-  const clientSeed = "0000000000000000000202209c6ca64552092ee7ae510c86a5cab48ea73179c2";
+  const clientSeed = "0000000000000000000202509c6ca64552092ee7ae510c86a5cab48ea73179c2";
 
   function getPoint(hash, salt) {
     const nBits = 52; // number of most significant bits to use
@@ -77,8 +77,8 @@ hr {
     // 3. X = r / 2^52
     let X = r / 2 ** nBits; // uniformly distributed in [0, 1)
     X = parseFloat(X.toPrecision(9));
-    // 4. X = 97 / (1-X)
-    X = 97 / (1 - X);
+    // 4. X = 96 / (1-X)
+    X = 96 / (1 - X);
     // 5. return max(trunc(X), 100)
     const result = Math.floor(X);
     // return Math.max(1, result / 100);
